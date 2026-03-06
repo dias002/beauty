@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeautyShym — Мастера красоты в Шымкенте</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23003b46'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23c4dfe6'>BS</text></svg>">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BeautyShym — Мастера красоты в Шымкенте" />
+  <meta property="og:description" content="Найдите лучшего мастера маникюра, макияжа или парикмахера в Шымкенте. Запись онлайн за несколько секунд." />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:url" content="https://beautyshym.kz" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Найдите лучшего мастера маникюра, макияжа или парикмахера в Шымкенте. Запись онлайн за несколько секунд." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Beauty<span>Shym</span></a>
+  <button id="langToggle" class="lang-btn">ҚАЗ</button>
+  <button type="button" class="btn-master js-open-master-modal"
+    data-ru="Стать мастером" data-kz="Шебер болу">Стать мастером</button>
+</header>
+
+<section class="hero">
+  <p class="hero-eye" data-ru="Шымкент · Бьюти-сервис" data-kz="Шымкент · Сұлулық қызметі">Шымкент · Бьюти-сервис</p>
+  <h1 data-ru-html="Мастера <em>красоты</em> рядом с вами"
+      data-kz-html="Жаныңыздағы <em>сұлулық шеберлері</em>">Мастера <em>красоты</em> рядом с вами</h1>
+  <p data-ru="Маникюр, макияж, парикмахеры и nail-мастера — запись за несколько секунд"
+     data-kz="Маникюр, макияж, шаштараздар және nail-шеберлер — бірнеше секундта жазылу">Маникюр, макияж, парикмахеры и nail-мастера — запись за несколько секунд</p>
+</section>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input id="searchInput" class="search-input" type="search" autocomplete="off"
+      data-ru-ph="Поиск по имени или адресу..."
+      data-kz-ph="Аты немесе мекенжайы бойынша іздеу..."
+      placeholder="Поиск по имени или адресу..." />
+  </div>
+</div>
+
+<div class="filters">
+  <div class="filters-inner">
+    <button class="chip active" data-cat="all">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span data-ru="Все" data-kz="Барлығы">Все</span>
+    </button>
+    <button class="chip" data-cat="nails">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 7 17l-4 1 1-4L15 3l3 3Z"/></svg>
+      <span data-ru="Nail / Маникюр" data-kz="Nail / Маникюр">Nail / Маникюр</span>
+    </button>
+    <button class="chip" data-cat="hair">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-5.2 8-13A8 8 0 0 0 4 9c0 7.8 8 13 8 13Z"/></svg>
+      <span data-ru="Парикмахер" data-kz="Шаштараз">Парикмахер</span>
+    </button>
+    <button class="chip" data-cat="makeup">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      <span data-ru="Визажист" data-kz="Визажист">Визажист</span>
+    </button>
+    <button class="chip" data-cat="brows">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-5 10-5 10 5 10 5"/><circle cx="12" cy="12" r="3"/></svg>
+      <span data-ru="Брови / Lash" data-kz="Қас / Кірпік">Брови / Lash</span>
+    </button>
+  </div>
+</div>
+<!-- <main class="section">
+  <h2 class="section-title" data-ru="Наши мастера" data-kz="Біздің шеберлер">Наши мастера</h2>
+  <p class="section-sub" id="count">Показано 8 специалистов</p>
+
+  <div class="grid">
+
+
+    <a class="card" data-cat="nails" data-name="Айгерим Касымова" data-addr="мкр. Аль-Фараби"
+       href="master.html?id=1&name=%D0%90%D0%B9%D0%B3%D0%B5%D1%80%D0%B8%D0%BC+%D0%9A%D0%B0%D1%81%D1%8B%D0%BC%D0%BE%D0%B2%D0%B0&spec=Nail-%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80&addr=%D0%BC%D0%BA%D1%80.+%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8,+12&price=4+000+%D1%82%D0%B3&exp=4+%D0%B3%D0%BE%D0%B4%D0%B0+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.9&reviews=87&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F21.jpg">
+      <div class="card-img">
+        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Айгерим Касымова" loading="lazy">
+        <span class="badge">Nail</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Айгерим Касымова</div>
+        <div class="card-spec" data-ru="Nail-мастер" data-kz="Nail-шебер">Nail-мастер</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">4.9</span><span class="count">(87)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>мкр. Аль-Фараби</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="4 года опыта" data-kz="4 жыл тәжірибесі">4 года опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 4 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+    <a class="card" data-cat="hair" data-name="Дана Сейткали" data-addr="пр. Республики"
+       href="master.html?id=2&name=%D0%94%D0%B0%D0%BD%D0%B0+%D0%A1%D0%B5%D0%B9%D1%82%D0%BA%D0%B0%D0%BB%D0%B8&spec=%D0%9F%D0%B0%D1%80%D0%B8%D0%BA%D0%BC%D0%B0%D1%85%D0%B5%D1%80-%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82&addr=%D0%BF%D1%80.+%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8,+24&price=6+000+%D1%82%D0%B3&exp=7+%D0%BB%D0%B5%D1%82+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.8&reviews=124&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F44.jpg">
+      <div class="card-img" style="background:#d4eaed">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Дана Сейткали" loading="lazy">
+        <span class="badge">Hair</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Дана Сейткали</div>
+        <div class="card-spec" data-ru="Парикмахер-стилист" data-kz="Шаштараз-стилист">Парикмахер-стилист</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">4.8</span><span class="count">(124)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>пр. Республики</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="7 лет опыта" data-kz="7 жыл тәжірибесі">7 лет опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 6 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+
+    <a class="card" data-cat="makeup" data-name="Малика Юсупова" data-addr="ул. Байтурсынова"
+       href="master.html?id=3&name=%D0%9C%D0%B0%D0%BB%D0%B8%D0%BA%D0%B0+%D0%AE%D1%81%D1%83%D0%BF%D0%BE%D0%B2%D0%B0&spec=%D0%92%D0%B8%D0%B7%D0%B0%D0%B6%D0%B8%D1%81%D1%82&addr=%D1%83%D0%BB.+%D0%91%D0%B0%D0%B9%D1%82%D1%83%D1%80%D1%81%D1%8B%D0%BD%D0%BE%D0%B2%D0%B0,+5&price=8+000+%D1%82%D0%B3&exp=5+%D0%BB%D0%B5%D1%82+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=5.0&reviews=63&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F68.jpg">
+      <div class="card-img" style="background:#bdd8e2">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Малика Юсупова" loading="lazy">
+        <span class="badge">Makeup</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Малика Юсупова</div>
+        <div class="card-spec" data-ru="Визажист" data-kz="Визажист">Визажист</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">5.0</span><span class="count">(63)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>ул. Байтурсынова</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="5 лет опыта" data-kz="5 жыл тәжірибесі">5 лет опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 8 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+
+    <a class="card" data-cat="brows" data-name="Зарина Омарова" data-addr="мкр. Нурсат"
+       href="master.html?id=4&name=%D0%97%D0%B0%D1%80%D0%B8%D0%BD%D0%B0+%D0%9E%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0&spec=%D0%91%D1%80%D0%BE%D0%B2%D0%B8%D1%81%D1%82+%2F+Lash&addr=%D0%BC%D0%BA%D1%80.+%D0%9D%D1%83%D1%80%D1%81%D0%B0%D1%82,+8&price=5+000+%D1%82%D0%B3&exp=3+%D0%B3%D0%BE%D0%B4%D0%B0+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.7&reviews=41&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F32.jpg">
+      <div class="card-img" style="background:#c4dfe6">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Зарина Омарова" loading="lazy">
+        <span class="badge">Brows</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Зарина Омарова</div>
+        <div class="card-spec" data-ru="Бровист / Lash" data-kz="Қас шебері / Lash">Бровист / Lash</div>
+        <div class="stars"><span class="s">★★★★☆</span><span class="score">4.7</span><span class="count">(41)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>мкр. Нурсат</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="3 года опыта" data-kz="3 жыл тәжірибесі">3 года опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 5 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+
+    <a class="card" data-cat="nails" data-name="Камила Бектурова" data-addr="пр. Тауке хана"
+       href="master.html?id=5&name=%D0%9A%D0%B0%D0%BC%D0%B8%D0%BB%D0%B0+%D0%91%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%BE%D0%B2%D0%B0&spec=%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80+%2F+%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80&addr=%D0%BF%D1%80.+%D0%A2%D0%B0%D1%83%D0%BA%D0%B5+%D1%85%D0%B0%D0%BD%D0%B0,+18&price=3+500+%D1%82%D0%B3&exp=2+%D0%B3%D0%BE%D0%B4%D0%B0+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.6&reviews=29&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F17.jpg">
+      <div class="card-img" style="background:#e0eff3">
+        <img src="https://randomuser.me/api/portraits/women/17.jpg" alt="Камила Бектурова" loading="lazy">
+        <span class="badge">Nail</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Камила Бектурова</div>
+        <div class="card-spec" data-ru="Маникюр / Педикюр" data-kz="Маникюр / Педикюр">Маникюр / Педикюр</div>
+        <div class="stars"><span class="s">★★★★☆</span><span class="score">4.6</span><span class="count">(29)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>пр. Тауке хана</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="2 года опыта" data-kz="2 жыл тәжірибесі">2 года опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 3 500 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+    <a class="card" data-cat="hair" data-name="Ясмин Алиева" data-addr="ул. Казыбек би"
+       href="master.html?id=6&name=%D0%AF%D1%81%D0%BC%D0%B8%D0%BD+%D0%90%D0%BB%D0%B8%D0%B5%D0%B2%D0%B0&spec=%D0%9A%D0%BE%D0%BB%D0%BE%D1%80%D0%B8%D1%81%D1%82+%2F+%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82&addr=%D1%83%D0%BB.+%D0%9A%D0%B0%D0%B7%D1%8B%D0%B1%D0%B5%D0%BA+%D0%B1%D0%B8,+30&price=9+000+%D1%82%D0%B3&exp=8+%D0%BB%D0%B5%D1%82+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.9&reviews=201&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F55.jpg">
+      <div class="card-img" style="background:#a8cdd6">
+        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Ясмин Алиева" loading="lazy">
+        <span class="badge">Hair</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Ясмин Алиева</div>
+        <div class="card-spec" data-ru="Колорист / Стилист" data-kz="Колорист / Стилист">Колорист / Стилист</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">4.9</span><span class="count">(201)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>ул. Казыбек би</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="8 лет опыта" data-kz="8 жыл тәжірибесі">8 лет опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 9 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+
+    <a class="card" data-cat="brows" data-name="Нургуль Исаева" data-addr="мкр. Самал"
+       href="master.html?id=7&name=%D0%9D%D1%83%D1%80%D0%B3%D1%83%D0%BB%D1%8C+%D0%98%D1%81%D0%B0%D0%B5%D0%B2%D0%B0&spec=Lash-%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80&addr=%D0%BC%D0%BA%D1%80.+%D0%A1%D0%B0%D0%BC%D0%B0%D0%BB,+2&price=4+500+%D1%82%D0%B3&exp=3+%D0%B3%D0%BE%D0%B4%D0%B0+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.8&reviews=55&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F29.jpg">
+      <div class="card-img" style="background:#c8e2e8">
+        <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Нургуль Исаева" loading="lazy">
+        <span class="badge">Lash</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Нургуль Исаева</div>
+        <div class="card-spec" data-ru="Lash-мастер" data-kz="Lash-шебер">Lash-мастер</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">4.8</span><span class="count">(55)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>мкр. Самал</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="3 года опыта" data-kz="3 жыл тәжірибесі">3 года опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 4 500 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+
+    <a class="card" data-cat="makeup" data-name="Айша Тлеулова" data-addr="пр. Абая"
+       href="master.html?id=8&name=%D0%90%D0%B9%D1%88%D0%B0+%D0%A2%D0%BB%D0%B5%D1%83%D0%BB%D0%BE%D0%B2%D0%B0&spec=%D0%92%D0%B8%D0%B7%D0%B0%D0%B6%D0%B8%D1%81%D1%82+%2F+%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82&addr=%D0%BF%D1%80.+%D0%90%D0%B1%D0%B0%D1%8F,+45&price=10+000+%D1%82%D0%B3&exp=6+%D0%BB%D0%B5%D1%82+%D0%BE%D0%BF%D1%8B%D1%82%D0%B0&rating=4.9&reviews=148&photo=https%3A%2F%2Frandomuser.me%2Fapi%2Fportraits%2Fwomen%2F73.jpg">
+      <div class="card-img" style="background:#9bc8d4">
+        <img src="https://randomuser.me/api/portraits/women/73.jpg" alt="Айша Тлеулова" loading="lazy">
+        <span class="badge">Makeup</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Айша Тлеулова</div>
+        <div class="card-spec" data-ru="Визажист / Стилист" data-kz="Визажист / Стилист">Визажист / Стилист</div>
+        <div class="stars"><span class="s">★★★★★</span><span class="score">4.9</span><span class="count">(148)</span></div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>пр. Абая</div>
+        <div class="card-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ru="6 лет опыта" data-kz="6 жыл тәжірибесі">6 лет опыта</span></div>
+      </div>
+      <div class="card-footer"><div class="card-price">от 10 000 <small>тг</small></div><span class="btn" data-ru="Записаться" data-kz="Жазылу">Записаться</span></div>
+    </a>
+
+  </div>
+</main>  -->
+
+
+<section class="how">
+  <div class="how-inner">
+    <h2 class="how-title" data-ru="Как это работает" data-kz="Бұл қалай жұмыс істейді">Как это работает</h2>
+    <p class="how-sub" data-ru="Просто, быстро, без лишних шагов" data-kz="Қарапайым, жылдам, артық қадамсыз">Просто, быстро, без лишних шагов</p>
+    <div class="how-tabs">
+      <button class="how-tab active" data-panel="panel-client" data-ru="Для клиента" data-kz="Клиент үшін">Для клиента</button>
+      <button class="how-tab" data-panel="panel-master" data-ru="Для мастера" data-kz="Шебер үшін">Для мастера</button>
+    </div>
+
+    <div class="how-panel active" id="panel-client">
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h3 data-ru="Найдите мастера" data-kz="Шеберді табыңыз">Найдите мастера</h3>
+          <p data-ru="Просматривайте профили, смотрите портфолио, рейтинг и цены. Фильтруйте по специализации."
+             data-kz="Профильдерді қараңыз, портфолио, рейтинг және бағаларды зерделеңіз. Мамандануы бойынша сүзгілеңіз.">Просматривайте профили, смотрите портфолио, рейтинг и цены. Фильтруйте по специализации.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h3 data-ru="Запишитесь онлайн" data-kz="Онлайн жазылыңыз">Запишитесь онлайн</h3>
+          <p data-ru="Выберите удобное время и отправьте заявку в пару кликов — без звонков и ожидания."
+             data-kz="Ыңғайлы уақытты таңдап, бірнеше рет баспаша өтінімді жіберіңіз — қоңырауссыз.">Выберите удобное время и отправьте заявку в пару кликов — без звонков и ожидания.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h3 data-ru="Получите подтверждение" data-kz="Растауды алыңыз">Получите подтверждение</h3>
+          <p data-ru="Мастер свяжется с вами в WhatsApp или Telegram и подтвердит запись."
+             data-kz="Шебер WhatsApp немесе Telegram арқылы хабарласып, жазылуды растайды.">Мастер свяжется с вами в WhatsApp или Telegram и подтвердит запись.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-panel" id="panel-master">
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h3 data-ru="Создайте профиль" data-kz="Профиль жасаңыз">Создайте профиль</h3>
+          <p data-ru="Нажмите стать мастером и там уже просто заполните заявку"
+             data-kz="«Шебер болу» батырмасын басып, анкетаны толтырыңыз.">Нажмите стать мастером и там уже просто заполните заявку</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h3 data-ru="Получайте клиентов" data-kz="Клиенттер алыңыз">Получайте клиентов</h3>
+          <p data-ru="Ваша карточка появится в каталоге BeautyShym и будет видна тысячам жителей Шымкента."
+             data-kz="Сіздің картаңыз BeautyShym каталогында пайда болып, Шымкент тұрғындарына көрінеді.">Ваша карточка появится в каталоге BeautyShym и будет видна тысячам жителей Шымкента.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h3 data-ru="Работайте и зарабатывайте" data-kz="Жұмыс істеңіз, табыс табыңыз">Работайте и зарабатывайте</h3>
+          <p data-ru="Принимайте записи, собирайте отзывы и растите свою клиентскую базу."
+             data-kz="Жазылуды қабылдаңыз, пікірлер жинаңыз және клиенттер базасын өсіріңіз.">Принимайте записи, собирайте отзывы и растите свою клиентскую базу.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <strong>BeautyShym</strong>
+    <div class="footer-contacts">
+      <a href="tel:+77001234567">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92Z"/></svg>
+        +7 700 123 45 67
+      </a>
+      <a href="https://t.me/beautyshym" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        @beautyshym
+      </a>
+    </div>
+    <span class="footer-copy"
+      data-ru="Мастера красоты в Шымкенте · 2025"
+      data-kz="Шымкенттегі сұлулық шеберлері · 2025">Мастера красоты в Шымкенте · 2025</span>
+  </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО: РЕГИСТРАЦИЯ МАСТЕРА -->
+<div class="modal-overlay" id="masterModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" data-ru="Стать мастером" data-kz="Шебер болу">Стать мастером</div>
+      <button class="modal-close" aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <p class="modal-sub"
+      data-ru="Заполните анкету — мы добавим вас в каталог BeautyShym бесплатно."
+      data-kz="Анкетаны толтырыңыз — біз сізді BeautyShym каталогына тегін қосамыз.">Заполните анкету — мы добавим вас в каталог BeautyShym бесплатно.</p>
+
+    <form id="masterRegForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc1n9oCN3Qho1Gih1g6GXYBlRl4zBXKylXVH417ySN-f9CPEw/formResponse"
+      method="POST"
+      target="hidden_iframe_modal">
+
+      <div class="field">
+        <label for="mr_name" data-ru="Имя и фамилия" data-kz="Аты-жөні">Имя и фамилия</label>
+        <input id="mr_name" name="entry.882423145" type="text" placeholder="Айгерим Касымова" required />
+      </div>
+
+      <div class="field">
+        <label for="mr_phone" data-ru="Номер телефона" data-kz="Телефон нөмірі">Номер телефона</label>
+        <input id="mr_phone" name="entry.672607704" type="tel" placeholder="+7 700 000 00 00" required />
+      </div>
+
+      <div class="field">
+        <label for="mr_spec" data-ru="Специализация" data-kz="Мамандануы">Специализация</label>
+        <select id="mr_spec" name="entry.263476796" required>
+          <option value="" disabled selected data-ru="Выберите специализацию" data-kz="Мамандануды таңдаңыз">Выберите специализацию</option>
+          <option value="Nail-мастер / Маникюр" data-ru="Nail-мастер / Маникюр" data-kz="Nail-шебер / Маникюр">Nail-мастер / Маникюр</option>
+          <option value="Парикмахер / Стилист" data-ru="Парикмахер / Стилист" data-kz="Шаштараз / Стилист">Парикмахер / Стилист</option>
+          <option value="Колорист" data-ru="Колорист" data-kz="Колорист">Колорист</option>
+          <option value="Визажист" data-ru="Визажист" data-kz="Визажист">Визажист</option>
+          <option value="Бровист / Lash-мастер" data-ru="Бровист / Lash-мастер" data-kz="Қас шебері / Lash-шебер">Бровист / Lash-мастер</option>
+          <option value="Другое" data-ru="Другое" data-kz="Басқа">Другое</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="mr_addr" data-ru="Район / Адрес приёма" data-kz="Аудан / Қабылдау мекенжайы">Район / Адрес приёма</label>
+        <input id="mr_addr" name="entry.1367539561" type="text" placeholder="мкр. Нурсат, ул. Республики..." required />
+      </div>
+
+      <div class="field">
+        <label for="mr_exp" data-ru="Опыт работы" data-kz="Жұмыс тәжірибесі">Опыт работы</label>
+        <select id="mr_exp" name="entry.988695208" required>
+          <option value="" disabled selected data-ru="Выберите опыт" data-kz="Тәжірибені таңдаңыз">Выберите опыт</option>
+          <option value="Менее 1 года" data-ru="Менее 1 года" data-kz="1 жылдан аз">Менее 1 года</option>
+          <option value="1–2 года" data-ru="1–2 года" data-kz="1–2 жыл">1–2 года</option>
+          <option value="3–5 лет" data-ru="3–5 лет" data-kz="3–5 жыл">3–5 лет</option>
+          <option value="Более 5 лет" data-ru="Более 5 лет" data-kz="5 жылдан артық">Более 5 лет</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-full" style="margin-top:8px"
+        data-ru="Отправить заявку" data-kz="Өтінімді жіберу">Отправить заявку</button>
+    </form>
+
+    <div class="modal-success" id="masterRegSuccess">
+      <div class="ms-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#003b46" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+      </div>
+      <h3 data-ru="Заявка отправлена!" data-kz="Өтінім жіберілді!">Заявка отправлена!</h3>
+      <p data-ru="Наши менеджеры рассмотрят вашу анкету и свяжутся с вами в течение 1–2 рабочих дней."
+         data-kz="Біздің менеджерлер анкетаңызды қарастырып, 1–2 жұмыс күні ішінде байланысады.">Наши менеджеры рассмотрят вашу анкету и свяжутся с вами в течение 1–2 рабочих дней.</p>
+    </div>
+  </div>
+</div>
+
+<iframe name="hidden_iframe_modal" style="display:none"></iframe>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>

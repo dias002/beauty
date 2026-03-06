@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — BeautyShym</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23003b46'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23c4dfe6'>BS</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Beauty<span>Shym</span></a>
+  <button id="langToggle" class="lang-btn">ҚАЗ</button>
+  <button type="button" class="btn-master js-open-master-modal"
+    data-ru="Стать мастером" data-kz="Шебер болу">Стать мастером</button>
+</header>
+
+<div class="not-found">
+  <div class="nf-num">404</div>
+  <h2 data-ru="Страница не найдена" data-kz="Бет табылмады">Страница не найдена</h2>
+  <p data-ru="Возможно, она была удалена или вы перешли по неверной ссылке."
+     data-kz="Мүмкін, ол жойылған немесе сіз қате сілтемеден өттіңіз.">Возможно, она была удалена или вы перешли по неверной ссылке.</p>
+  <a href="index.html" class="btn"
+    data-ru="Вернуться на главную" data-kz="Басты бетке оралу">Вернуться на главную</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <strong>BeautyShym</strong>
+    <div class="footer-contacts">
+      <a href="tel:+77001234567">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92Z"/></svg>
+        +7 700 123 45 67
+      </a>
+      <a href="https://t.me/beautyshym" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        @beautyshym
+      </a>
+    </div>
+    <span class="footer-copy"
+      data-ru="Мастера красоты в Шымкенте · 2025"
+      data-kz="Шымкенттегі сұлулық шеберлері · 2025">Мастера красоты в Шымкенте · 2025</span>
+  </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО: РЕГИСТРАЦИЯ МАСТЕРА -->
+<div class="modal-overlay" id="masterModal" role="dialog" aria-modal="true" aria-label="Регистрация мастера">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Стать мастером</div>
+      <button class="modal-close" aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <p class="modal-sub">Заполните анкету — мы добавим вас в каталог BeautyShym бесплатно.</p>
+
+    <form id="masterRegForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc1n9oCN3Qho1Gih1g6GXYBlRl4zBXKylXVH417ySN-f9CPEw/formResponse"
+      method="POST"
+      target="hidden_iframe_modal">
+
+      <div class="field">
+        <label for="mr_name">Имя и фамилия</label>
+        <input id="mr_name" name="entry.882423145" type="text" placeholder="Айгерим Касымова" required />
+      </div>
+      <div class="field">
+        <label for="mr_phone">Номер телефона</label>
+        <input id="mr_phone" name="entry.672607704" type="tel" placeholder="+7 700 000 00 00" required />
+      </div>
+      <div class="field">
+        <label for="mr_spec">Специализация</label>
+        <select id="mr_spec" name="entry.263476796" required>
+          <option value="" disabled selected>Выберите специализацию</option>
+          <option value="Nail-мастер / Маникюр">Nail-мастер / Маникюр</option>
+          <option value="Парикмахер / Стилист">Парикмахер / Стилист</option>
+          <option value="Колорист">Колорист</option>
+          <option value="Визажист">Визажист</option>
+          <option value="Бровист / Lash-мастер">Бровист / Lash-мастер</option>
+          <option value="Другое">Другое</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mr_addr">Район / Адрес приёма</label>
+        <input id="mr_addr" name="entry.1367539561" type="text" placeholder="мкр. Нурсат, ул. Республики..." required />
+      </div>
+      <div class="field">
+        <label for="mr_exp">Опыт работы</label>
+        <select id="mr_exp" name="entry.988695208" required>
+          <option value="" disabled selected>Выберите опыт</option>
+          <option value="Менее 1 года">Менее 1 года</option>
+          <option value="1–2 года">1–2 года</option>
+          <option value="3–5 лет">3–5 лет</option>
+          <option value="Более 5 лет">Более 5 лет</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-full" style="margin-top:8px">Отправить заявку</button>
+    </form>
+
+    <div class="modal-success" id="masterRegSuccess">
+      <div class="ms-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#003b46" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+      </div>
+      <h3>Заявка отправлена!</h3>
+      <p>Наши менеджеры рассмотрят вашу анкету и свяжутся с вами в течение 1–2 рабочих дней.</p>
+    </div>
+  </div>
+</div>
+
+<iframe name="hidden_iframe_modal" style="display:none"></iframe>
+<script src="i18n.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>

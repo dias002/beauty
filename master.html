@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Запись к мастеру — BeautyShym</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23003b46'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23c4dfe6'>BS</text></svg>">
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" id="og-title" content="Мастер — BeautyShym" />
+  <meta property="og:description" content="Запишитесь к мастеру красоты в Шымкенте на BeautyShym" />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Beauty<span>Shym</span></a>
+  <button id="langToggle" class="lang-btn">ҚАЗ</button>
+  <button type="button" class="btn-master js-open-master-modal"
+    data-ru="Стать мастером" data-kz="Шебер болу">Стать мастером</button>
+</header>
+
+<div class="master-hero">
+  <a href="index.html" class="back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+    <span data-ru="Назад" data-kz="Артқа">Назад</span>
+  </a>
+  <div class="master-info">
+    <div class="master-avatar" id="avatarEl"></div>
+    <div class="master-meta">
+      <h1 id="nameEl"></h1>
+      <div class="spec" id="specEl"></div>
+      <div class="master-stars" id="starsEl"></div>
+    </div>
+  </div>
+</div>
+
+<div class="master-details">
+  <div class="detail-row">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-5.5-8-12A8 8 0 0 1 20 10c0 6.5-8 12-8 12Z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span id="addrEl"></span>
+  </div>
+  <div class="detail-row">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span id="expEl"></span>
+  </div>
+  <div class="detail-row">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span id="priceEl"></span>
+  </div>
+</div>
+
+<!-- CONTACT BUTTONS -->
+<div class="contact-actions">
+  <a id="btnWa" href="#" class="btn-wa" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    WhatsApp
+  </a>
+  <a id="btnTg" href="#" class="btn-tg" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Telegram
+  </a>
+</div>
+
+<!-- SERVICES -->
+<div class="services">
+  <div class="services-title" id="servicesTitleEl" data-ru="Услуги и цены" data-kz="Қызметтер мен бағалар">Услуги и цены</div>
+  <div id="servicesList"></div>
+</div>
+
+<!-- PORTFOLIO -->
+<div class="portfolio">
+  <div class="portfolio-title" data-ru="Портфолио" data-kz="Портфолио">Портфолио</div>
+  <div class="portfolio-grid" id="portfolioGrid"></div>
+</div>
+
+<!-- BOOKING FORM -->
+<form class="booking-form" id="bookingForm"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeKXJDwZbO8zlXion0m6l6sYC8YhlY1GanIP3Ph2LyKVnSIYQ/formResponse"
+  method="POST"
+  target="hidden_iframe">
+
+  <h2 class="form-title" data-ru="Записаться" data-kz="Жазылу">Записаться</h2>
+
+  <div class="prefilled">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+    <span data-ru="Мастер:" data-kz="Шебер:">Мастер:</span> <strong id="prefillLabel" style="margin-left:4px"></strong>
+  </div>
+
+  <input type="hidden" name="entry.175456739" id="masterField" />
+
+  <div class="field">
+    <label for="inp_name" data-ru="Ваше имя" data-kz="Сіздің атыңыз">Ваше имя</label>
+    <input id="inp_name" name="entry.2023841053" type="text"
+      data-ru-ph="Как вас зовут?" data-kz-ph="Сіздің атыңыз?"
+      placeholder="Как вас зовут?" required />
+  </div>
+
+  <div class="field">
+    <label for="inp_phone" data-ru="Номер телефона" data-kz="Телефон нөмірі">Номер телефона</label>
+    <input id="inp_phone" name="entry.1711694298" type="tel" placeholder="+7 700 000 00 00" required />
+  </div>
+
+  <div class="field">
+    <label for="inp_date" data-ru="Дата" data-kz="Күні">Дата</label>
+    <input id="inp_date" name="entry.1801926445" type="date" required />
+  </div>
+
+  <div class="field">
+    <label for="inp_time" data-ru="Время" data-kz="Уақыты">Время</label>
+    <input id="inp_time" name="entry.1783242859" type="time" required />
+  </div>
+
+  <button type="submit" class="btn btn-full"
+    data-ru="Отправить запись" data-kz="Жазылуды жіберу">Отправить запись</button>
+</form>
+
+<!-- Success message -->
+<div id="successMsg" style="display:none; text-align:center; padding:32px 20px 56px; max-width:480px; margin:0 auto;">
+  <div style="width:56px;height:56px;background:#c4dfe6;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#003b46" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+  </div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#003b46;margin-bottom:8px;"
+    data-ru="Запись отправлена" data-kz="Жазылу жіберілді">Запись отправлена</div>
+  <p style="font-size:13px;color:#66a5ad;margin-bottom:20px;"
+    data-ru="Мастер свяжется с вами для подтверждения"
+    data-kz="Шебер растау үшін сізбен байланысады">Мастер свяжется с вами для подтверждения</p>
+  <a href="index.html" class="btn" data-ru="Вернуться к мастерам" data-kz="Шеберлерге оралу">Вернуться к мастерам</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <strong>BeautyShym</strong>
+    <div class="footer-contacts">
+      <a href="tel:+77001234567">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1.37h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92Z"/></svg>
+        +7 700 123 45 67
+      </a>
+      <a href="https://t.me/beautyshym" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        @beautyshym
+      </a>
+    </div>
+    <span class="footer-copy"
+      data-ru="Мастера красоты в Шымкенте · 2025"
+      data-kz="Шымкенттегі сұлулық шеберлері · 2025">Мастера красоты в Шымкенте · 2025</span>
+  </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО: РЕГИСТРАЦИЯ МАСТЕРА -->
+<div class="modal-overlay" id="masterModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" data-ru="Стать мастером" data-kz="Шебер болу">Стать мастером</div>
+      <button class="modal-close" aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <p class="modal-sub"
+      data-ru="Заполните анкету — мы добавим вас в каталог BeautyShym бесплатно."
+      data-kz="Анкетаны толтырыңыз — біз сізді BeautyShym каталогына тегін қосамыз.">Заполните анкету — мы добавим вас в каталог BeautyShym бесплатно.</p>
+
+    <form id="masterRegForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc1n9oCN3Qho1Gih1g6GXYBlRl4zBXKylXVH417ySN-f9CPEw/formResponse"
+      method="POST"
+      target="hidden_iframe_modal">
+
+      <div class="field">
+        <label for="mr_name" data-ru="Имя и фамилия" data-kz="Аты-жөні">Имя и фамилия</label>
+        <input id="mr_name" name="entry.882423145" type="text" placeholder="Айгерим Касымова" required />
+      </div>
+      <div class="field">
+        <label for="mr_phone" data-ru="Номер телефона" data-kz="Телефон нөмірі">Номер телефона</label>
+        <input id="mr_phone" name="entry.672607704" type="tel" placeholder="+7 700 000 00 00" required />
+      </div>
+      <div class="field">
+        <label for="mr_spec" data-ru="Специализация" data-kz="Мамандануы">Специализация</label>
+        <select id="mr_spec" name="entry.263476796" required>
+          <option value="" disabled selected data-ru="Выберите специализацию" data-kz="Мамандануды таңдаңыз">Выберите специализацию</option>
+          <option value="Nail-мастер / Маникюр" data-ru="Nail-мастер / Маникюр" data-kz="Nail-шебер / Маникюр">Nail-мастер / Маникюр</option>
+          <option value="Парикмахер / Стилист" data-ru="Парикмахер / Стилист" data-kz="Шаштараз / Стилист">Парикмахер / Стилист</option>
+          <option value="Колорист" data-ru="Колорист" data-kz="Колорист">Колорист</option>
+          <option value="Визажист" data-ru="Визажист" data-kz="Визажист">Визажист</option>
+          <option value="Бровист / Lash-мастер" data-ru="Бровист / Lash-мастер" data-kz="Қас шебері / Lash-шебер">Бровист / Lash-мастер</option>
+          <option value="Другое" data-ru="Другое" data-kz="Басқа">Другое</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mr_addr" data-ru="Район / Адрес приёма" data-kz="Аудан / Қабылдау мекенжайы">Район / Адрес приёма</label>
+        <input id="mr_addr" name="entry.1367539561" type="text" placeholder="мкр. Нурсат, ул. Республики..." required />
+      </div>
+      <div class="field">
+        <label for="mr_exp" data-ru="Опыт работы" data-kz="Жұмыс тәжірибесі">Опыт работы</label>
+        <select id="mr_exp" name="entry.988695208" required>
+          <option value="" disabled selected data-ru="Выберите опыт" data-kz="Тәжірибені таңдаңыз">Выберите опыт</option>
+          <option value="Менее 1 года" data-ru="Менее 1 года" data-kz="1 жылдан аз">Менее 1 года</option>
+          <option value="1–2 года" data-ru="1–2 года" data-kz="1–2 жыл">1–2 года</option>
+          <option value="3–5 лет" data-ru="3–5 лет" data-kz="3–5 жыл">3–5 лет</option>
+          <option value="Более 5 лет" data-ru="Более 5 лет" data-kz="5 жылдан артық">Более 5 лет</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-full" style="margin-top:8px"
+        data-ru="Отправить заявку" data-kz="Өтінімді жіберу">Отправить заявку</button>
+    </form>
+
+    <div class="modal-success" id="masterRegSuccess">
+      <div class="ms-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#003b46" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+      </div>
+      <h3 data-ru="Заявка отправлена!" data-kz="Өтінім жіберілді!">Заявка отправлена!</h3>
+      <p data-ru="Наши менеджеры рассмотрят вашу анкету и свяжутся с вами в течение 1–2 рабочих дней."
+         data-kz="Біздің менеджерлер анкетаңызды қарастырып, 1–2 жұмыс күні ішінде байланысады.">Наши менеджеры рассмотрят вашу анкету и свяжутся с вами в течение 1–2 рабочих дней.</p>
+    </div>
+  </div>
+</div>
+
+<iframe name="hidden_iframe" style="display:none"></iframe>
+<iframe name="hidden_iframe_modal" style="display:none"></iframe>
+
+<script>
+  const p = new URLSearchParams(location.search);
+  const name     = p.get('name')    || '';
+  const spec     = p.get('spec')    || '';
+  const photo    = p.get('photo')   || '';
+  const rating   = p.get('rating')  || '';
+  const reviews  = p.get('reviews') || '';
+  const masterId = parseInt(p.get('id') || '1');
+
+  // Fill basic info
+  document.getElementById('nameEl').textContent  = name;
+  document.getElementById('specEl').textContent  = spec;
+  document.getElementById('addrEl').textContent  = p.get('addr')  || '';
+  document.getElementById('expEl').textContent   = p.get('exp')   || '';
+  document.getElementById('priceEl').textContent = '';
+  document.title = name + ' — BeautyShym';
+
+  const ogTitle = document.getElementById('og-title');
+  if (ogTitle) ogTitle.content = name + ' — BeautyShym';
+
+  // Avatar
+  const avatarEl = document.getElementById('avatarEl');
+  if (photo) {
+    const img = document.createElement('img');
+    img.src = decodeURIComponent(photo);
+    img.alt = name;
+    avatarEl.appendChild(img);
+  } else {
+    avatarEl.textContent = name.split(' ').map(w => w[0]).join('').slice(0, 2);
+  }
+
+  // Stars
+  if (rating) {
+    const full = Math.round(parseFloat(rating));
+    document.getElementById('starsEl').innerHTML =
+      `<span class="s">${'★'.repeat(full)}${'☆'.repeat(5-full)}</span><span class="score">${rating}</span>${reviews ? `<span class="score" style="opacity:.6">(${reviews})</span>` : ''}`;
+  }
+
+  // Form prefill
+  const masterLabel = name + (spec ? ' — ' + spec : '');
+  document.getElementById('masterField').value        = masterLabel;
+  document.getElementById('prefillLabel').textContent = masterLabel;
+
+  // Contact buttons
+  const phone = '77001234567';
+  const waMsg = encodeURIComponent('Здравствуйте! Хочу записаться к ' + name);
+  document.getElementById('btnWa').href = 'https://wa.me/' + phone + '?text=' + waMsg;
+  document.getElementById('btnTg').href = 'https://t.me/beautyshym';
+
+  // Services — bilingual
+  const specLower = spec.toLowerCase();
+  const servicesBySpec = {
+    nail: {
+      ru: [
+        { name: 'Маникюр классический',        price: '4 000 тг' },
+        { name: 'Маникюр + покрытие гель-лак', price: '6 000 тг' },
+        { name: 'Педикюр классический',         price: '5 000 тг' },
+        { name: 'Педикюр + гель-лак',           price: '7 000 тг' },
+        { name: 'Наращивание ногтей',           price: '9 000 тг' },
+        { name: 'Дизайн (1 ноготь)',            price: '300 тг' },
+      ],
+      kz: [
+        { name: 'Классикалық маникюр',          price: '4 000 тг' },
+        { name: 'Маникюр + гель-лак жабыны',   price: '6 000 тг' },
+        { name: 'Классикалық педикюр',          price: '5 000 тг' },
+        { name: 'Педикюр + гель-лак',           price: '7 000 тг' },
+        { name: 'Тырнақ ұзарту',               price: '9 000 тг' },
+        { name: 'Дизайн (1 тырнақ)',            price: '300 тг' },
+      ],
+    },
+    hair: {
+      ru: [
+        { name: 'Стрижка женская',              price: '6 000 тг' },
+        { name: 'Стрижка + укладка',            price: '8 500 тг' },
+        { name: 'Окрашивание (одним цветом)',   price: '12 000 тг' },
+        { name: 'Мелирование / балаяж',         price: '18 000 тг' },
+        { name: 'Кератиновое выпрямление',      price: '22 000 тг' },
+        { name: 'Укладка / локоны',             price: '4 500 тг' },
+      ],
+      kz: [
+        { name: 'Әйелдер шаш кесу',            price: '6 000 тг' },
+        { name: 'Шаш кесу + укладка',           price: '8 500 тг' },
+        { name: 'Бояу (бір түсте)',             price: '12 000 тг' },
+        { name: 'Мелирование / балаяж',         price: '18 000 тг' },
+        { name: 'Кератинмен тегістеу',          price: '22 000 тг' },
+        { name: 'Укладка / толқындар',          price: '4 500 тг' },
+      ],
+    },
+    makeup: {
+      ru: [
+        { name: 'Дневной макияж',               price: '8 000 тг' },
+        { name: 'Вечерний макияж',              price: '12 000 тг' },
+        { name: 'Свадебный макияж',             price: '18 000 тг' },
+        { name: 'Макияж + причёска (пакет)',    price: '25 000 тг' },
+        { name: 'Нюдовый / натуральный мейк',  price: '7 000 тг' },
+      ],
+      kz: [
+        { name: 'Күндізгі макияж',              price: '8 000 тг' },
+        { name: 'Кешкі макияж',                price: '12 000 тг' },
+        { name: 'Үйлену макияжы',              price: '18 000 тг' },
+        { name: 'Макияж + шаш безендіру (пакет)', price: '25 000 тг' },
+        { name: 'Нюд / табиғи макияж',         price: '7 000 тг' },
+      ],
+    },
+    brows: {
+      ru: [
+        { name: 'Коррекция бровей',             price: '2 500 тг' },
+        { name: 'Окрашивание бровей',           price: '3 000 тг' },
+        { name: 'Ламинирование бровей',         price: '5 500 тг' },
+        { name: 'Наращивание ресниц (2D)',       price: '5 000 тг' },
+        { name: 'Наращивание ресниц (объём)',    price: '7 000 тг' },
+        { name: 'Ламинирование ресниц',         price: '4 500 тг' },
+      ],
+      kz: [
+        { name: 'Қас түзету',                  price: '2 500 тг' },
+        { name: 'Қас бояу',                    price: '3 000 тг' },
+        { name: 'Қас ламинациясы',             price: '5 500 тг' },
+        { name: 'Кірпік ұзарту (2D)',           price: '5 000 тг' },
+        { name: 'Кірпік ұзарту (көлем)',        price: '7 000 тг' },
+        { name: 'Кірпік ламинациясы',          price: '4 500 тг' },
+      ],
+    },
+  };
+
+  let category = 'nail';
+  if (specLower.includes('hair') || specLower.includes('парикмахер') || specLower.includes('колорист')) {
+    category = 'hair';
+  } else if (specLower.includes('makeup') || specLower.includes('визажист')) {
+    category = 'makeup';
+  } else if (specLower.includes('brow') || specLower.includes('lash') || specLower.includes('бровист')) {
+    category = 'brows';
+  }
+
+  function renderServices(lang) {
+    const list = servicesBySpec[category][lang] || servicesBySpec[category].ru;
+    const container = document.getElementById('servicesList');
+    container.innerHTML = '';
+    list.forEach(s => {
+      const row = document.createElement('div');
+      row.className = 'service-item';
+      row.innerHTML = `<span class="service-name">${s.name}</span><span class="service-price">${s.price}</span>`;
+      container.appendChild(row);
+    });
+  }
+
+  renderServices(window.getLang ? window.getLang() : 'ru');
+
+  document.addEventListener('langchange', e => renderServices(e.detail));
+
+  // Portfolio
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  for (let i = 1; i <= 4; i++) {
+    const img = document.createElement('img');
+    img.className = 'portfolio-img';
+    img.src = 'https://picsum.photos/seed/master' + masterId + '_' + i + '/300/300';
+    img.alt = 'Работа ' + i;
+    img.loading = 'lazy';
+    portfolioGrid.appendChild(img);
+  }
+
+  // Booking form success
+  document.getElementById('bookingForm').addEventListener('submit', () => {
+    setTimeout(() => {
+      document.getElementById('bookingForm').style.display = 'none';
+      document.getElementById('successMsg').style.display  = 'block';
+    }, 600);
+  });
+</script>
+<script src="i18n.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>
