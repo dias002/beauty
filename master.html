@@ -375,13 +375,28 @@
 
   // Portfolio
   const portfolioGrid = document.getElementById('portfolioGrid');
-  for (let i = 1; i <= 4; i++) {
-    const img = document.createElement('img');
-    img.className = 'portfolio-img';
-    img.src = 'https://picsum.photos/seed/master' + masterId + '_' + i + '/300/300';
-    img.alt = 'Работа ' + i;
-    img.loading = 'lazy';
-    portfolioGrid.appendChild(img);
+  const portfolioOverrides = {
+    9: ['photos/nurgulya-1.jpg', 'photos/nurgulya-2.jpg', 'photos/nurgulya-3.jpg']
+  };
+  const localPhotos = portfolioOverrides[masterId];
+  if (localPhotos) {
+    localPhotos.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.className = 'portfolio-img';
+      img.src = src;
+      img.alt = 'Работа ' + (i + 1);
+      img.loading = 'lazy';
+      portfolioGrid.appendChild(img);
+    });
+  } else {
+    for (let i = 1; i <= 4; i++) {
+      const img = document.createElement('img');
+      img.className = 'portfolio-img';
+      img.src = 'https://picsum.photos/seed/master' + masterId + '_' + i + '/300/300';
+      img.alt = 'Работа ' + i;
+      img.loading = 'lazy';
+      portfolioGrid.appendChild(img);
+    }
   }
 
   // Booking form success
