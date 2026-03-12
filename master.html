@@ -107,7 +107,7 @@
     <input id="inp_time" name="entry.1783242859" type="time" required />
   </div>
 
-  <button type="submit" class="btn btn-full"
+  <button type="submit" class="btn btn-full bookBtn"
     data-ru="Отправить запись" data-kz="Жазылуды жіберу">Отправить запись</button>
 </form>
 
@@ -392,12 +392,10 @@
     }
   }
 
-  // Booking form success
-  document.getElementById('bookingForm').addEventListener('submit', () => {
-    setTimeout(() => {
+
+  document.querySelector('.bookBtn').addEventListener('click', () => {
       document.getElementById('bookingForm').style.display = 'none';
-      document.getElementById('successMsg').style.display  = 'block';
-    }, 600);
+      document.getElementById('successMsg').style.display  = 'block';;
   });
 </script>
 <script src="i18n.js"></script>
